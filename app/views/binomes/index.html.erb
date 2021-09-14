@@ -1,0 +1,18 @@
+<div class="container mt-5">
+  <h1 class="text-center">Creez un nouveau binome</h1>
+  <%= render "binome-form" %>
+  <br>
+  <h1 class="text-center">Liste de tous les binomes</h1>
+
+  <% @binomes.each do |binome| %>
+    <div class="binome_card">
+      <p><strong>Cree par:</strong> <%= binome.user.first_name %> <%= binome.user.last_name %></p>
+      <p><strong>Benevole:</strong> <%= binome.benevole.first_name %> <%= binome.benevole.last_name %></p>
+      <p><strong>Client:</strong> <%= binome.client.first_name %> <%= binome.client.last_name %></p>
+      <p><strong>Request Status:</strong> <%= binome.request_status %></p>
+      <p><strong>ToDo:</strong> <%= binome.to_do %></p>
+      <p><strong>Status:</strong> <%= binome.status %></p>
+      <p><strong>Date de mise en relation:</strong> <%= binome.connection_date %></p>
+    </div>
+  <% end %>
+</div>
