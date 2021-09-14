@@ -6,6 +6,7 @@ class ClientsController < ApplicationController
 
   def create
     @client = Client.new(client_params)
+    @client.full_name = params[:client][:first_name] + " " + params[:client][:last_name]
     if @client.save
       redirect_to clients_path
     else
