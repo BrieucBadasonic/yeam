@@ -6,6 +6,7 @@ class BenevolesController < ApplicationController
 
   def create
     @benevole = Benevole.new(benevole_params)
+    @benevole.full_name = params[:benevole][:first_name] + " " + params[:benevole][:last_name]
     if @benevole.save
       redirect_to benevoles_path
     else

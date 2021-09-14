@@ -9,6 +9,7 @@ user1 = User.new(password: "123456",
                  email: "brieuc@gmail.com",
                  first_name: "Brieuc",
                  last_name: "Labiouse",
+                 full_name: "Brieuc Labiouse",
                  telephone: "0479378074")
 user1.save
 

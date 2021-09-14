@@ -3,4 +3,8 @@ class BinomesController < ApplicationController
     @binomes = Binome.all
     @binome = Binome.new
   end
+
+  def create
+
+  end
 end

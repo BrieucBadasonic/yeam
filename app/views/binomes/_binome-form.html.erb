@@ -1,8 +1,8 @@
 <div class="binome-card">
   <%= simple_form_for @binome do |f| %>
-    <%= f.association :user, label_method: :last_name, value_method: :id, prompt: "Choose an admin" %>
-    <%= f.association :benevole %>
-    <%= f.association :client %>
+    <%= f.association :user, label_method: :full_name, value_method: :id, prompt: "Select an admin" %>
+    <%= f.association :benevole, label_method: :full_name, value_method: :id, prompt: "Select a benevole" %>
+    <%= f.association :client, label_method: :full_name, value_method: :id, prompt: "Select a client" %>
     <%= f.input :request_status, label: "Select a request status", collection: Binome::REQUEST_STATUS %>
     <%= f.input :to_do, placeholder: "To Do", label: false %>
     <%= f.input :status, as: :text, placeholder: "Status", label: false %>
