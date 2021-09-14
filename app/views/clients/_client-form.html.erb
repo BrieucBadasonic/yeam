@@ -1,8 +1,10 @@
-<%= simple_form_for @client do |f| %>
-  <%= f.input :first_name %>
-  <%= f.input :last_name %>
-  <%= f.input :email %>
-  <%= f.input :telephone %>
-  <%= f.input :residency %>
-  <%= f.submit class:"btn btn-warning"%>
-<% end %>
+<div class="client-card">
+  <%= simple_form_for @client do |f| %>
+    <%= f.input :first_name, placeholder: "Prenom", label: false %>
+    <%= f.input :last_name, placeholder: "Nom de famille", label: false %>
+    <%= f.input :email, placeholder: "Email", label: false %>
+    <%= f.input :telephone, placeholder: "Telephone", label: false %>
+    <%= f.input :residency, placeholder: "Residence", label: false %>
+    <%= f.submit class:"btn btn-warning"%>
+  <% end %>
+</div>
