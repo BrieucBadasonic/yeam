@@ -11,3 +11,21 @@ user1 = User.new(password: "123456",
                  last_name: "Labiouse",
                  telephone: "0479378074")
 user1.save
+
+benevole1 = Benevole.new(first_name: "Adrien",
+                         last_name: "Ducobu",
+                         telephone: "0473457612",
+                         email: "Adrien@gmail.com")
+benevole1.save
+
+client1 = Client.new(first_name: "Bastien",
+                     last_name: "Boulouze",
+                     telephone: "0498784532",
+                     email: "bastien@gmail.com",
+                     residency: "Tournai")
+client1.save
+
+binome1 = Binome.new(user_id: user1.id,
+                     benevole_id: benevole1.id,
+                     client_id: client1.id)
+binome1.save
