@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_14_123151) do
+ActiveRecord::Schema.define(version: 2021_09_14_124048) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,21 @@ ActiveRecord::Schema.define(version: 2021_09_14_123151) do
     t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "binomes", force: :cascade do |t|
+    t.string "request_status"
+    t.string "to_do"
+    t.string "status"
+    t.date "connection_date"
+    t.bigint "user_id", null: false
+    t.bigint "benevole_id", null: false
+    t.bigint "client_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["benevole_id"], name: "index_binomes_on_benevole_id"
+    t.index ["client_id"], name: "index_binomes_on_client_id"
+    t.index ["user_id"], name: "index_binomes_on_user_id"
   end
 
   create_table "clients", force: :cascade do |t|
@@ -49,4 +64,7 @@ ActiveRecord::Schema.define(version: 2021_09_14_123151) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "binomes", "benevoles"
+  add_foreign_key "binomes", "clients"
+  add_foreign_key "binomes", "users"
 end
