@@ -1,7 +1,9 @@
 <div class="container mt-5">
-  <h1 class="text-center">Liste de tous les benevoles -
-  <%= link_to "Ajoutez un Benevole", new_benevole_path, class:"btn btn-warning" %></h1>
+  <h1 class="text-center">Ajoutez un nouveau benevole</h1>
+  <%= render "benevole-form" %>
+  <br>
 
+  <h1 class="text-center">Liste de tous les benevoles</h1>
   <% @benevoles.each do |benevole| %>
     <div class="benevole_card">
       <p><strong>Name:</strong> <%= benevole.first_name %> <%= benevole.last_name %></p>

@@ -1,9 +1,6 @@
 class BenevolesController < ApplicationController
   def index
     @benevoles = Benevole.all
-  end
-
-  def new
     @benevole = Benevole.new
   end
 

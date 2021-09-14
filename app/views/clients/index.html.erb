@@ -1,6 +1,8 @@
 <div class="container mt-5">
-  <h1 class="text-center">Liste de tous les clients -
-  <%= link_to "Ajoutez un Client", new_client_path, class:"btn btn-warning" %></h1>
+  <h1 class="text-center">Ajoutez un nouveau lient</h1>
+  <%= render "client-form" %>
+  <br>
+  <h1 class="text-center">Liste de tous les clients</h1>
 
   <% @clients.each do |client| %>
     <div class="client_card">

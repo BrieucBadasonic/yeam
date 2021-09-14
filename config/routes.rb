@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get "/about_us", to: 'pages#about_us'
 
-  resources :benevoles, only: [ :index, :new, :create ]
-  resources :clients, only: [ :index, :new, :create ]
+  resources :benevoles, only: [ :index, :create ]
+  resources :clients, only: [ :index, :create ]
 end
