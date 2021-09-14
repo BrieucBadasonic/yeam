@@ -1,0 +1,13 @@
+<div class="container mt-5">
+  <h1 class="text-center">Liste de tous les clients -
+  <%= link_to "Ajoutez un Client", new_client_path, class:"btn btn-warning" %></h1>
+
+  <% @clients.each do |client| %>
+    <div class="client_card">
+      <p><strong>Name:</strong> <%= client.first_name %> <%= client.last_name %></p>
+      <p><strong>Email:</strong> <%= client.email %></p>
+      <p><strong>Phone:</strong> <%= client.telephone %></p>
+      <p><strong>Residency:</strong> <%= client.residency %></p>
+    </div>
+  <% end %>
+</div>

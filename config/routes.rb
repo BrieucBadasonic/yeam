@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get "/about_us", to: 'pages#about_us'
 
   resources :benevoles, only: [ :index, :new, :create ]
+  resources :clients, only: [ :index, :new, :create ]
 end
