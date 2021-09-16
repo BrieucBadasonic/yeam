@@ -5,8 +5,8 @@
     <%= f.association :client, label_method: :full_name, value_method: :id, prompt: "Select a client" %>
     <%= f.input :request_status, label: "Select a request status", collection: Binome::REQUEST_STATUS %>
     <%= f.input :to_do, placeholder: "To Do", label: false %>
-    <%= f.input :status, as: :text, placeholder: "Status", label: false %>
-    <%= f.input :connection_date, as: :date, label: "Date de mise en relation" %>
+    <%= f.input :status, as: :text, placeholder: "Sitation actuelle", label: false %>
+    <%= f.input :connection_date, as: :string, required: false, label: "Date de mise en relation", input_html: {class: "datepicker"} %>
     <%= f.submit class:"btn btn-warning"%>
   <% end %>
 </div>
