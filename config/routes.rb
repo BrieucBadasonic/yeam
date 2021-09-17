@@ -5,5 +5,5 @@ Rails.application.routes.draw do
 
   resources :benevoles, only: [ :index, :create ]
   resources :clients, only: [ :index, :create ]
-  resources :binomes, only: [ :index, :create]
+  resources :binomes, only: [ :index, :new, :create]
 end
