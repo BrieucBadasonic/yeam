@@ -99,6 +99,28 @@ client4.save
 
 binome1 = Binome.new(user: user1,
                      benevole: benevole1,
-                     client: client1)
+                     client: client1,
+                     request_status: "A SUIVRE")
 
 binome1.save
+
+binome2 = Binome.new(user: user2,
+                     benevole: benevole2,
+                     client: client2,
+                     request_status: "RAS")
+
+binome2.save
+
+binome3 = Binome.new(user: user3,
+                     benevole: benevole3,
+                     client: client3,
+                     request_status: "CONTACT PERDU")
+
+binome3.save
+
+binome4 = Binome.new(user: user4,
+                     benevole: benevole4,
+                     client: client4,
+                     request_status: "DOSSIER CLOTURE")
+
+binome4.save
