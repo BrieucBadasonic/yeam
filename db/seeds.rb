@@ -13,20 +13,114 @@ user1 = User.new(password: "123456",
                  telephone: "0479378074")
 user1.save
 
+user2 = User.new(password: "belgacom11",
+                 email: "olivier.beernaert@gmail.com",
+                 first_name: "Olivier",
+                 last_name: "Beernaert",
+                 full_name: "Olivier Beernaert",
+                 telephone: "0489542334")
+user2.save
+
+user3 = User.new(password: "123456",
+                 email: "michel@gmail.com",
+                 first_name: "Michel",
+                 last_name: "Duchateau",
+                 full_name: "Michel Duchateau",
+                 telephone: "0474672341")
+user3.save
+
+user4 = User.new(password: "123456",
+                 email: "Ines@gmail.com",
+                 first_name: "Ines",
+                 last_name: "Durban",
+                 full_name: "Ines Durban",
+                 telephone: "0490756744")
+user4.save
+
 benevole1 = Benevole.new(first_name: "Adrien",
                          last_name: "Ducobu",
+                         full_name: "Adrien Ducobu",
                          telephone: "0473457612",
                          email: "Adrien@gmail.com")
 benevole1.save
 
-client1 = Client.new(first_name: "Bastien",
-                     last_name: "Boulouze",
+benevole2 = Benevole.new(first_name: "Chris",
+                         last_name: "Laplante",
+                         full_name: "Chris Laplante",
+                         telephone: "0448613853",
+                         email: "Chris@gmail.com")
+benevole2.save
+
+benevole3 = Benevole.new(first_name: "Thomas",
+                         last_name: "Verrati",
+                         telephone: "0473908944",
+                         full_name: "Thomas Verrati",
+                         email: "Thomas@gmail.com")
+benevole3.save
+
+benevole4 = Benevole.new(first_name: "Lora",
+                         last_name: "Friquet",
+                         full_name: "Lora Friquet",
+                         telephone: "0497115632",
+                         email: "Adrien@gmail.com")
+benevole4.save
+
+client1 = Client.new(first_name: "Client 1",
+                     last_name: "Client 1",
+                     full_name: "Client 1",
                      telephone: "0498784532",
-                     email: "bastien@gmail.com",
-                     residency: "Tournai")
+                     email: "Client1@gmail.com",
+                     residency: "Forest")
 client1.save
 
-binome1 = Binome.new(user_id: user1.id,
-                     benevole_id: benevole1.id,
-                     client_id: client1.id)
+client2 = Client.new(first_name: "client 2",
+                     last_name: "Client 2",
+                     full_name: "Client 2",
+                     telephone: "0498784532",
+                     email: "client2@gmail.com",
+                     residency: "Tournai")
+client2.save
+
+client3 = Client.new(first_name: "Client 3",
+                     last_name: "Client 3",
+                     full_name: "Client 3",
+                     telephone: "0498784532",
+                     email: "client3@gmail.com",
+                     residency: "Schaerbeek")
+client3.save
+
+client4 = Client.new(first_name: "Client 4",
+                     last_name: "Client 4",
+                     full_name: "Client 4",
+                     telephone: "0498784532",
+                     email: "client4@gmail.com",
+                     residency: "Jette")
+client4.save
+
+binome1 = Binome.new(user: user1,
+                     benevole: benevole1,
+                     client: client1,
+                     request_status: "A SUIVRE")
+
 binome1.save
+
+binome2 = Binome.new(user: user2,
+                     benevole: benevole2,
+                     client: client2,
+                     request_status: "RAS")
+
+binome2.save
+
+binome3 = Binome.new(user: user3,
+                     benevole: benevole3,
+                     client: client3,
+                     request_status: "CONTACT PERDU")
+
+binome3.save
+
+binome4 = Binome.new(user: user4,
+                     benevole: benevole4,
+                     client: client4,
+                     request_status: "DOSSIER CLOTURE")
+
+binome4.save
