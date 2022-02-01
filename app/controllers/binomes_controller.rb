@@ -30,6 +30,9 @@ class BinomesController < ApplicationController
   private
 
   def binome_params
-    params.require(:binome).permit(:request_status, :to_do, :status, :connection_date)
+    params.require(:binome).permit(:request_status,
+                                   :to_do,
+                                   :status,
+                                   :connection_date)
   end
 end
