@@ -9,10 +9,10 @@
   <% if @binomes %>
     <% @binomes.each do |binome| %>
       <div class="binome_dasboard_card">
-        <div><strong>Benevole:</strong> <%= binome.benevole.first_name %> <%= binome.benevole.last_name %></div>
-        <div><strong>Client:</strong> <%= binome.client.first_name %> <%= binome.client.last_name %></div>
-        <div><strong>Request Status:</strong> <%= binome.request_status %></div>
-        <div><strong>Date de mise en relation:</strong> <%= binome.connection_date %></div>
+        <div class="item_binome_dasboard_card"><strong>Benevole:</strong> <%= binome.benevole.first_name %> <%= binome.benevole.last_name %></div>
+        <div class="item_binome_dasboard_card"><strong>Client:</strong> <%= binome.client.first_name %> <%= binome.client.last_name %></div>
+        <div class="item_binome_dasboard_card"><strong>Request Status:</strong> <%= binome.request_status %></div>
+        <div class="item_binome_dasboard_card"><strong>Date de mise en relation:</strong> <%= binome.connection_date %></div>
       </div>
     <% end %>
   <% end %>
