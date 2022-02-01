@@ -5,7 +5,7 @@ class Binome < ApplicationRecord
 
   has_many :reports
 
-  REQUEST_STATUS = ["RAS", "A SUIVRE", "CONTACT PERDU", "DOSSIER CLOTURE"]
+  REQUEST_STATUS = ["🟢 RAS", "🟠 A SUIVRE", "🔴 CONTACT PERDU", "🔵 DOSSIER CLOTURE"]
 
   validates :request_status, inclusion: { in: REQUEST_STATUS }
 

@@ -20,7 +20,7 @@ user2 = User.new(password: "belgacom11",
                  telephone: "0489542334")
 user2.full_name = user2.first_name + " " + user2.last_name
 user2.save
-    
+
 user3 = User.new(password: "123456",
                  email: "michel@gmail.com",
                  first_name: "Michel",
@@ -100,27 +100,27 @@ client4.save
 binome1 = Binome.new(user: user1,
                      benevole: benevole1,
                      client: client1,
-                     request_status: "A SUIVRE")
+                     request_status: "🟠 A SUIVRE")
 
 binome1.save
 
 binome2 = Binome.new(user: user2,
                      benevole: benevole2,
                      client: client2,
-                     request_status: "RAS")
+                     request_status: "🟢 RAS")
 
 binome2.save
 
 binome3 = Binome.new(user: user3,
                      benevole: benevole3,
                      client: client3,
-                     request_status: "CONTACT PERDU")
+                     request_status: "🔴 CONTACT PERDU")
 
 binome3.save
 
 binome4 = Binome.new(user: user4,
                      benevole: benevole4,
                      client: client4,
-                     request_status: "DOSSIER CLOTURE")
+                     request_status: "🔵 DOSSIER CLOTURE")
 
 binome4.save
