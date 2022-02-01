@@ -2,7 +2,7 @@
   <h1 class="text-center">Liste de tous les binomes</h1>
   <%= form_tag binomes_path, method: :get do %>
     <%= label_tag 'Request Status' %>
-    <%= select_tag "query", options_for_select(["A SUIVRE", "RAS", "CONTACT PERDU", "DOSSIER CLOTURE"]) %>
+    <%= select_tag "query", options_for_select(["🟠 A SUIVRE", "🟢 RAS", "🔴 CONTACT PERDU", "🔵 DOSSIER CLOTURE"]) %>
     <%= submit_tag "Search", class: "btn btn-warning" %>
   <% end %>
 
