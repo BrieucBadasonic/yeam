@@ -2,8 +2,8 @@ class BinomesController < ApplicationController
   def index
     if params[:query].present?
       @binomes = Binome.search_by_request_status(params[:query])
-    # else
-    #   @binomes = Binome.all
+    else
+      @binomes = Binome.all
     end
   end
 
