@@ -7,6 +7,10 @@ class BinomesController < ApplicationController
     end
   end
 
+  def show
+    @binome = Binome.find(params[:id])
+  end
+
   def new
     @binome = Binome.new
   end

@@ -4,9 +4,20 @@
   margin-top: 16px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-decoration: none;
+
 }
 
 .item_binome_dasboard_card {
   display: flex;
   flex-direction: column;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit;
 }
