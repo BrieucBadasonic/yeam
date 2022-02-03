@@ -1,10 +1,25 @@
 <div class="client-card">
   <%= simple_form_for @client do |f| %>
-    <%= f.input :first_name, placeholder: "Prenom", label: false %>
-    <%= f.input :last_name, placeholder: "Nom de famille", label: false %>
-    <%= f.input :email, placeholder: "Email", label: false %>
-    <%= f.input :telephone, placeholder: "Telephone", label: false %>
-    <%= f.input :residency, placeholder: "Residence", label: false %>
-    <%= f.submit class:"btn btn-warning"%>
+    <div class="mt-3">
+      <%= f.input :first_name, placeholder: "Prenom", label: false %>
+    </div>
+    <div class="mt-3">
+      <%= f.input :last_name, placeholder: "Nom de famille", label: false %>
+    </div>
+    <div class="mt-3">
+      <%= f.input :email, placeholder: "Email", label: false %>
+    </div>
+    <div class="mt-3">
+      <%= f.input :telephone, placeholder: "Telephone", label: false %>
+    </div>
+    <div class="mt-3">
+      <%= f.input :residency, placeholder: "Residence", label: false %>
+    </div>
+      <div class="mt-3">
+      <%= f.input :comment, placeholder: "Any remarks?", label: false %>
+    </div>
+    <div class="mt-3">
+      <%= f.submit class:"btn btn-warning"%>
+    </div>
   <% end %>
 </div>

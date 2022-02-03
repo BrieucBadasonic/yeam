@@ -17,6 +17,6 @@ class BenevolesController < ApplicationController
   private
 
   def benevole_params
-    params.require(:benevole).permit(:first_name, :last_name, :telephone, :email)
+    params.require(:benevole).permit(:first_name, :last_name, :telephone, :email, :comment)
   end
 end
